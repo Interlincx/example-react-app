@@ -1,0 +1,26 @@
+{
+  "name": "example-react-app",
+  "version": "1.0.0",
+  "description": "This is an example of a basic React app.",
+  "main": "index.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "create-react-class": "^15.6.0",
+    "google-fonts": "^1.0.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "budo": "^10.0.4",
+    "standard": "*"
+  },
+  "scripts": {
+    "dev": "budo client/index.js -l -d public -- -t [ babelify --presets [ react es2015 ] ]",
+    "test": "standard"
+  },
+  "keywords": [],
+  "author": "David Guttman <david@guttman.io> (http://davidguttman.com/)",
+  "license": "MIT"
+}
