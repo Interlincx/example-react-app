@@ -18,11 +18,14 @@
     "react-dom": "^15.6.2"
   },
   "devDependencies": {
+    "browserify": "^14.4.0",
     "budo": "^10.0.4",
-    "standard": "*"
+    "standard": "*",
+    "uglify-es": "^3.1.2"
   },
   "scripts": {
     "dev": "budo client/index.js -l -d public -- -t localenvify -t [ babelify --presets [ react es2015 ] ]",
+    "build": "NODE_ENV=production browserify client/index.js -t localenvify -t [ babelify --presets [ react es2015 ] ] | uglifyjs -mc > public/index.js",
     "test": "standard"
   },
   "keywords": [],
