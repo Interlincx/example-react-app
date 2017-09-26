@@ -1,4 +1,8 @@
 import React from 'react'
+import AppBar from 'material-ui/AppBar'
+import Button from 'material-ui/Button'
+import Toolbar from 'material-ui/Toolbar'
+import Typography from 'material-ui/Typography'
 import createReactClass from 'create-react-class'
 
 import auth from './auth'
@@ -39,8 +43,26 @@ module.exports = createReactClass({
 
     return (
       <div>
+        {this.renderHeader()}
         <div>{main}</div>
       </div>
+    )
+  },
+
+  renderHeader () {
+    var logout = this.state.email
+      ? <Button color='contrast' href='#/logout'>Logout</Button>
+      : ''
+
+    return (
+      <AppBar position='static'>
+        <Toolbar>
+          <Typography type='title' color='inherit' style={{flex: 1}}>
+            Example App
+          </Typography>
+          { logout }
+        </Toolbar>
+      </AppBar>
     )
   },
 
