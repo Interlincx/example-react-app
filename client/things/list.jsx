@@ -8,6 +8,7 @@ import { CircularProgress } from 'material-ui/Progress'
 import createReactClass from 'create-react-class'
 
 import api from '../api'
+import navigate from '../navigate'
 
 module.exports = createReactClass({
   getInitialState () {
@@ -57,7 +58,8 @@ module.exports = createReactClass({
               <TableRow
                 key={thing.name}
                 hover
-                style={{cursor: 'pointer'}} >
+                style={{cursor: 'pointer'}}
+                onClick={this.editThing.bind(this, thing.name)} >
                 <TableCell>{thing.name}</TableCell>
                 <TableCell>{thing.color}</TableCell>
               </TableRow>
@@ -103,5 +105,9 @@ module.exports = createReactClass({
       }
       this.setState({things: things, _status: 'READY'})
     })
+  },
+
+  editThing (name) {
+    navigate(`/things/edit/${name}`)
   }
 })
