@@ -6,6 +6,8 @@ import navigate from './navigate'
 var router = module.exports = Router()
 
 router.set('/', restrict(require('./things/list.jsx')))
+router.set('/things', restrict(require('./things/list.jsx')))
+router.set('/things/create', restrict(require('./things/create.jsx')))
 
 router.set('/login', auth.login)
 router.set('/logout', auth.logout)
