@@ -9,6 +9,7 @@
     "babelify": "^7.3.0",
     "create-react-class": "^15.6.0",
     "google-fonts": "^1.0.0",
+    "http-hash": "^2.0.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2"
   },
