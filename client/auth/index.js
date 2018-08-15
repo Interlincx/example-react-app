@@ -4,10 +4,12 @@ import opts from './options'
 import wrap from './wrap.jsx'
 import navigate from '../navigate'
 
+var AUTH_SERVER = require('../config').authServer
+
 var navHome = navigate.bind(null, '/')
 
 var aui = bindAll(AuthenticUI({
-  server: 'https://ix-id.lincx.la',
+  server: AUTH_SERVER,
   links: {
     signup: '#/signup',
     login: '#/login',

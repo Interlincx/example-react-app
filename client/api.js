@@ -1,6 +1,6 @@
 var auth = require('./auth')
 
-var API = process.env.API_ENDPOINT || 'https://kindly-viscose.glitch.me/'
+var API = require('./config').api
 
 module.exports = {
   getThing,
