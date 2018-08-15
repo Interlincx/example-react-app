@@ -4,6 +4,10 @@ import googleFonts from 'google-fonts'
 
 import Main from './main.jsx'
 
+var appName = 'Example App'
+
+document.title = appName
+
 googleFonts.add({'Roboto': true})
 document.body.style.margin = 0
 document.body.style.background = '#fbfbfb'
@@ -11,4 +15,4 @@ document.body.style.fontFamily = 'Roboto'
 
 var main = document.createElement('div')
 document.body.appendChild(main)
-ReactDOM.render(React.createElement(Main), main)
+ReactDOM.render(React.createElement(Main, { appName }), main)

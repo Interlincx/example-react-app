@@ -58,7 +58,7 @@ module.exports = createReactClass({
       <AppBar position='static'>
         <Toolbar>
           <Typography type='title' color='inherit' style={{flex: 1}}>
-            Example App
+            { this.props.appName }
           </Typography>
           { logout }
         </Toolbar>
